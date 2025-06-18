@@ -76,4 +76,49 @@ Depending on the metric:
 * **If p-value < 0.05** → Reject the null hypothesis (significant difference)
 * **If p-value ≥ 0.05** → Fail to reject the null hypothesis (no significant difference)
 
-We interpret whether the feature being tested (e.g., province or gender) significantly impacts **risk** or **profit**.
+
+
+### **6. Feature Engineering**
+
+Created meaningful features such as vehicle age, client segmentation based on demographics, and interaction terms between vehicle and client attributes.
+
+Encoded categorical variables using one-hot and label encoding for model compatibility.
+
+Engineered aggregate features like fleet size influence on claims.
+
+### **7. Modeling Approach**
+
+Two key predictive modeling goals were addressed:
+
+Claim Severity Prediction (Regression):
+
+1. Target: Predict TotalClaims amount for policies with claims.
+
+Models: Linear Regression, Decision Trees, Random Forests, XGBoost.
+
+Evaluation: Root Mean Squared Error (RMSE), R-squared (R²), Mean Absolute Error (MAE).
+
+2. Premium Optimization (Regression):
+
+Target: Predict CalculatedPremiumPerTerm reflecting fair premium pricing.
+
+Models: Same as above.
+
+Evaluation: RMSE, R², MAE.
+
+Additionally, classification modeling approaches were discussed for segmenting policies into “claim” vs “no claim” groups to assist targeted marketing campaigns.
+
+ ### **8. Model Evaluation **
+Focused on regression metrics suited for continuous outcome variables.
+
+Clarified that classification metrics such as accuracy, precision, recall, and F1-score apply only to classification tasks (e.g., predicting claim occurrence).
+
+### **9. Model Interpretation & Explainability**
+Model Interpretation & Explainability
+Utilized SHAP (SHapley Additive exPlanations) to:
+
+Provide global and local explanations of feature impact on model predictions.
+
+Generate visualizations like summary plots and force plots for interpretability.
+
+Introduced LIME as an alternative for local explanation of individual predictions.
